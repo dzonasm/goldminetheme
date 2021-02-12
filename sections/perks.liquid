@@ -1,0 +1,41 @@
+<section class=" d-flex flex-center">
+
+    {% for block in section.blocks %}
+
+    <div class=" p-1 m-1 perk-card d-flex align-center flex-column">
+        <div>
+            <img class="h-200 w-100 fit-cover" src="{{block.settings.img | img_url: 'master'}}" />
+        </div>
+        
+        <article class="text-center">
+            <h3 class="p-1">Amazing product</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, saepe.</p>
+        </article>
+
+    </div>
+    
+    {% endfor%}
+
+    
+</section>
+
+{% schema %}
+  {
+    "name": "Perks",
+    "settings": [
+    ],
+    "blocks":[
+      {
+          "type": "image",
+        "name": "perks",
+        "settings": [
+            {
+                "type": "image_picker",
+                "label": "your image",
+                "id": "img"
+            }
+        ]
+      }
+    ]
+  }
+{% endschema %}

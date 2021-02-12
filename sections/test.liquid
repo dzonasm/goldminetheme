@@ -1,0 +1,30 @@
+
+<section class="hero-section d-flex" id="textsection">
+    <h1 class="hero_text center-with-absolute"> {{ section.settings.text-box }} </h1>
+    <h3> {{ section.settings.text }} </h3>
+  <img class="hero-img w-100 fit-cover" src="{{section.settings.img | img_url:"master"}}"/>
+</section>
+{% schema %}
+  {
+    "name": "Hero",
+    "settings": [
+      {
+        "id": "text-box",
+        "type": "text",
+        "label": "Heading",
+        "default": "Title"
+      },
+      {
+        "id": "img",
+        "type": "image_picker",
+        "label": "Add your hero image"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
